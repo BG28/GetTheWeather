@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get The Weather</title>
+    <!-- Custom CSS  -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+</head>
+
+<body style="background-color: #2c3539 !important">
+    <section class="loadDisplay">
+        <div class="headerTemplate">
+            <div>
+                <h1 class="heading">Get The Weather</h1>
+            </div>
+            <form action="/" method="POST">
+                <input type="text" name="cityName" placeholder="Enter the city name" class="searchBox" autofocus>
+                <button type="submit" name="city" class="btn btn-lg btn-danger">Get it</button>
+            </form>
+        </div>
+    </section>
+    <% if(flag != null){%>
+    <section class="show-weather">
+        <div class="result">
+            <p><%= city%></p>
+            <p><%=temp%>℃</p>
+            <img src=" <%=image%>" alt="">
+            <p><%=description%></p>
+        </div>
+    </section>
+    <%}%>
+    
+    <!-- Bootstrap Jquery      -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
